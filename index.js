@@ -37,8 +37,8 @@ class ViewController {
 }
 
 window.viewController = new ViewController();
-// window.viewController.next('exersices')
-window.viewController.next('calendar');
+window.viewController.next('exersices');
+// window.viewController.next('calendar');
 
 // 
 document.querySelector('.button_end').addEventListener('click', () => window.viewController.next('exersices'));

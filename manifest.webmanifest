@@ -1,0 +1,20 @@
+{
+    "name": "Workout Home",
+    "short_name": "Workout Home",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#E66263",
+    "description": "Workout Home",
+    "icons": [
+        {
+            "src": "./img/icon.svg",
+            "sizes": "48x48",
+            "type": "image/svg"
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "web"
+        }
+    ]
+}
