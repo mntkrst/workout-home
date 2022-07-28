@@ -1,6 +1,6 @@
 {
     "name": "Workout Home",
-    "short_name": "Workout Home",
+    "short_name": "Workout",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#E66263",
