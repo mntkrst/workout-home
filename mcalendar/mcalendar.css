@@ -1,0 +1,22 @@
+
+.mcalendar-month {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.mcalendar-carucesel {
+    position: relative;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mcalendar-grid {
+    display: grid;
+}
+
+.mcalendar-arr-l, .mcalendar-arr-r {
+    width: 24px;
+    height: 24px;
+
+}

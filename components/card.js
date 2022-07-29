@@ -17,6 +17,8 @@ const MCCard = new MCFactory({
 
 const DEFAULT_TEXT = 'Carefully perform the exercise shown in the picture';
 
+let doneCallback = () => {};
+
 const TRAININGS = [
     {
         title: 'A Simple worlout',
@@ -103,7 +105,6 @@ const TRAININGS = [
 
 let destroyFn = () => { };
 
-
 const MCTraining = new MCFactory({
     html: `
         <div>
@@ -169,8 +170,9 @@ const MCTraining = new MCFactory({
                     clearInterval(mcEl.intervalId);
                     destroyFn = () => { };
                     mcEl.intervalId = null;
-                    window.viewController.next('exersices')
-                    console.log('DONE');
+                    window.viewController.next('exersices');
+
+                    doneCallback();
                 }
             }
         }, 1000);
@@ -184,10 +186,10 @@ const MCTraining = new MCFactory({
 TRAININGS.forEach(t => {
     document.querySelector('.view_exersices .card-wrapper').appendChild(MCCard.create(t, {
         onSelect: (e, data) => {
-
             window.viewController.next('training');
             document.querySelector('.view_training .view__content__no__rel').innerHTML = '';
             document.querySelector('.view_training .view__content__no__rel').appendChild(MCTraining.create(t));
         }
     }));
 });
+

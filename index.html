@@ -8,7 +8,7 @@
     <meta name="theme-color" content="#E66263">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./calendar/vanilla-calendar.min.css">
+    <link rel="stylesheet" href="./mcalendar/mcalendar.css">
     <link rel="icon" href="./img/icon.svg">
     <link rel="manifest" href="./manifest.webmanifest">
     <title>Workout Home</title>
@@ -61,9 +61,23 @@
                 </div>
             </div>
             <div class="view view_calendar">
-                <div class="view__content">
-                    <div class="calendar-wrap">
-                        <div class="vanilla-calendar"></div>
+                <div class="view__content vc-content">
+                    <div class="mcalendar">
+
+                    </div>
+                    <div class="date-content">
+
+
+                        <div class="date-activities">
+                            
+                        </div>
+
+                        <div class="add-activities" style="display: none">
+                            <div class="add-simple">Add simple</div>
+                            <div class="add-medium">Add medium</div>
+                            <div class="add-hard">Add hard</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -88,8 +102,9 @@
             </button>
         </div>
     </div>
+    <script src="./storage.js"></script>
     <script src="./modules/mc.js"></script>
-    <script src="./calendar/vanilla-calendar.min.js"></script>
+    <script src="./mcalendar/mcalendar.js"></script>
     <script src="./components/card.js"></script>
     <script src="./index.js"></script>
 </body>

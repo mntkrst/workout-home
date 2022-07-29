@@ -81,10 +81,12 @@ class MCFactory {
         if (param === 'context') {
             return context;
         } else {
+            if (!context[param]) {
+                return '\\NO PARAM';
+            }
             return context[param];
         }
     }
-
 
     static createElementFromHTML(html) {
         const container = document.createElement('div');
